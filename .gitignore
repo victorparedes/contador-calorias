@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#Expo files
+expo/
+.expo/devices.json
+.expo/README.md
