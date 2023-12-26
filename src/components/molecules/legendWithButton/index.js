@@ -1,23 +1,17 @@
 import { View, Text } from "react-native";
 import { Button, Icon } from '@rneui/themed';
-import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
-const AddCalories = ()=> {
-    const {navigate} = useNavigation()
-    
-    const handleAddCaloriesPress = ()=> {
-        navigate('AddFood')
-    };
+const LegendWithButton = ({handleOnPress, legend})=> {
 
     return (
         <View style={styles.container}>
             <View style={styles.leftContainer} >
-                <Text style={styles.text}>Calories</Text>
+                <Text style={styles.text}>{legend}</Text>
             </View>
             <View style={styles.rightContainer} >
-                <Button radius="lg" color="#4ecb71" onPress={handleAddCaloriesPress}>
+                <Button radius="lg" color="#4ecb71" onPress={handleOnPress}>
                     <Icon name="add-circle-outline" color="#fff" />
                 </Button>
             </View>
@@ -25,4 +19,4 @@ const AddCalories = ()=> {
     )    
 };
 
-export default AddCalories;
+export default LegendWithButton;

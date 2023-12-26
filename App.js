@@ -3,7 +3,7 @@ import { SafeAreaView, View, Text, StyleSheet, Platform, StatusBar } from "react
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from './src/components/screens/home';
-import AddFood from './src/components/screens/addFood'
+import FoodList from "./src/components/screens/foodList";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +13,7 @@ export default function App() {
       <NavigationContainer>
       <Stack.Navigator initialRouteName='Home' >
         <Stack.Screen name='Home' component={Home} options={{headerShown: false}}/>
-        <Stack.Screen name='AddFood' component={AddFood} options={{headerShown: false}} />
+        <Stack.Screen name='FoodList' component={FoodList} options={{headerShown: false}} />
       </Stack.Navigator>
       </NavigationContainer> 
     </SafeAreaView>

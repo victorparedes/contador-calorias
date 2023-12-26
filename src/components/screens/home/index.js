@@ -1,14 +1,22 @@
 import { View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import Header from "../../molecules/header";
-import AddCalories from "../../molecules/addCalories";
+import LegendWithButton from "../../molecules/legendWithButton";
+
 import styles from "./styles";
 
 const Home = ()=> {
+    const {navigate} = useNavigation()
+    
+    const handleAddCaloriesPress = ()=> {
+        navigate('FoodList')
+    };
+        
     return (
         <View style={styles.container}>
             <Header />
-            <AddCalories />
+            <LegendWithButton handleOnPress={handleAddCaloriesPress} legend={'Calories'} />
         </View>
     )    
 };
